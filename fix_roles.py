@@ -161,6 +161,18 @@ def run_data_fix(dry_run=True):
                                 has_member_role = True
                             else:
                                 user_roles_collection.delete_one({"_id": role["_id"]})
+                                pg_delete_sql = """
+                                    DELETE FROM postgres_user_roles 
+                                    WHERE user_id=%s
+                                    AND team_id=%s
+                                    AND role_name=%s
+                                    AND scope=%s
+                                """
+                                pg_insert_params = (
+                                    member["user_id"], team_id, role["role_name"], 'TEAM' 
+                                )
+                                pg_cursor.execute(pg_delete_sql, pg_insert_params)
+                                pg_conn.commit()
                                 print(f"  - Deleted role '{role['role_name']}' for user {member['user_id']}")
                         if not has_member_role:
                                 current_time = datetime.now(timezone.utc)
