@@ -1,7 +1,10 @@
-# Data Migration Script: Fix Missing Team Creator Roles
+# Data Migration Script: Fix Missing/Incorrect Team Roles
 Date: September 21, 2025
+
 Author: Hariom Vashista
+
 Status: Ready for Execution
+
 
 ## Overview
 This script is a one-time data migration tool designed to correct a data inconsistency issue in both our MongoDB and PostgreSQL databases.
