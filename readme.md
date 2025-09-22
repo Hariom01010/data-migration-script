@@ -39,7 +39,7 @@ If a role already exists, the script skips it and moves on, ensuring no duplicat
 
 - A configured .env file with the correct database credentials.
 
-## 5. Configuration
+## Configuration
 The script is configured using a .env file in the same directory.
 
 Copy the example configuration file:
@@ -51,7 +51,7 @@ cp config.env.example .env
 Edit the .env file and fill in the correct values for the environment you are targeting (e.g., staging or production).
 
 
-## 6. Execution Plan
+## Execution Plan
 This script must be run with extreme care, following these steps precisely.
 
 ### Step 1: Install Dependencies
