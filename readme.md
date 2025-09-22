@@ -45,7 +45,7 @@ The script is configured using a .env file in the same directory.
 Copy the example configuration file:
 
 ```
-cp config.env.example .env
+cp .env.example .env
 ```
 
 Edit the .env file and fill in the correct values for the environment you are targeting (e.g., staging or production).
